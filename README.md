@@ -1,3 +1,3 @@
 ## Hypo-Explosions
 
-Made origanlly by @Superkat32
+Made originally by @Superkat32
