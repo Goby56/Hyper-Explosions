@@ -3,6 +3,6 @@
 #  Overview
 
 
-- Contributor author: Superkat32
-- Helper: 
+- Contributor author Superkat32
+- Helper
 
