@@ -1,4 +1,8 @@
 ## Hyper-Explosions
 
-Made originally by @Superkat32
+#  Overview
+
+
+Contributor author: Superkat32
+Helper: 
 
