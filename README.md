@@ -3,7 +3,7 @@
 #  Overview
 Bomb drops then it goes booooom!
 
-Contributors 
+Contributors: 
 - Superkat32 ( Former author )
 - Random (Dev)
 
