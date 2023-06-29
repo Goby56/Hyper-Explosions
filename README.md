@@ -1,6 +1,6 @@
-## Hyper-Explosions
+# Hyper-Explosions
 
-#  Overview
+## Overview
 Bomb drops then it goes booooom!
 
 Contributors: 
