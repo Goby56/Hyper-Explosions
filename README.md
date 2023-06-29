@@ -4,6 +4,6 @@
 Bomb drops then it goes booooom!
 
 Contributors: 
-- Superkat32 ( Former author )
+- Superkat32 (Former author)
 - Random (Dev)
 
