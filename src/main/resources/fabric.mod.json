@@ -1,34 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "explosiveenhancement",
+  "id": "hyperexplosions",
   "version": "${version}",
 
-  "name": "Explosive Enhancement",
-  "description": "Enhancing the explosion animation since 2023.",
+  "name": "Hyper Explosions",
+  "description": "If vanilla had nukes, this would be it",
   "authors": [
-    "Superkat32"
+    "Superkat32",
+    "Goby56"
   ],
   "contact": {
-    "sources": "https://github.com/Superkat32/Explosive-Enhancement"
+    "sources": "https://github.com/Project-Alphaa/Hyper-Explosions"
   },
 
   "license": "MIT",
-  "icon": "assets/explosiveenhancement/icon.png",
+  "icon": "assets/hyperexplosions/icon.png",
 
   "environment": "client",
   "entrypoints": {
     "main": [
-      "net.superkat.explosiveenhancement.ExplosiveEnhancement"
+      "com.alpha.hyperexplosions.HyperExplosions"
     ],
     "client": [
-      "net.superkat.explosiveenhancement.ExplosiveEnhancementClient"
+      "com.alpha.hyperexplosions.HyperExplosionsClient"
     ],
     "modmenu": [
-      "net.superkat.explosiveenhancement.ModMenuIntegration"
+      "com.alpha.hyperexplosions.config.ModMenuIntegration"
     ]
   },
   "mixins": [
-    "explosiveenhancement.mixins.json"
+    "hyperexplosions.mixins.json"
   ],
 
   "depends": {

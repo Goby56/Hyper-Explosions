@@ -1,0 +1,55 @@
+{
+  "hyperexplosions.config.title": "Explosive Enhancement Config",
+
+  "hyperexplosions.category.default": "Particles",
+
+  "hyperexplosions.explosion.group": "Explosions",
+  "hyperexplosions.explosion.group.tooltip": "Explosion particle options",
+  "hyperexplosions.blastwave.enabled": "Blast Wave Particle",
+  "hyperexplosions.blastwave.enabled.tooltip": "A large orange, horizontal circle",
+  "hyperexplosions.fireball.enabled": "Fireball Particle",
+  "hyperexplosions.fireball.enabled.tooltip": "A large orange, vertical circle",
+  "hyperexplosions.mushroomcloud.enabled": "Mushroom Cloud Particles",
+  "hyperexplosions.mushroomcloud.enabled.tooltip": "Smoke that is in the shape of a mushroom",
+  "hyperexplosions.sparks.enabled": "Sparks Particle",
+  "hyperexplosions.sparks.enabled.tooltip": "White lines that come as a result of the explosion",
+  "hyperexplosions.sparks.size": "Sparks Size",
+  "hyperexplosions.sparks.size.tooltip": "Controls the size of the sparks particle",
+  "hyperexplosions.sparks.opacity": "Sparks Opacity",
+  "hyperexplosions.sparks.opacity.tooltip": "Controls the opacity of the sparks particle",
+  "hyperexplosions.default.enabled": "Default Explosion Particles",
+  "hyperexplosions.default.enabled.tooltip": "The vanilla Minecraft particles",
+
+  "hyperexplosions.underwater.group": "Underwater Explosions",
+  "hyperexplosions.underwater.group.tooltip": "Underwater explosion options",
+  "hyperexplosions.underwater.enabled": "Underwater Explosions",
+  "hyperexplosions.underwater.enabled.tooltip": "Should there be a special effect for underwater explosions?",
+  "hyperexplosions.underwater.shockwave": "Shockwave Particle",
+  "hyperexplosions.underwater.shockwave.tooltip": "A vertical circle with a hint of blue",
+  "hyperexplosions.underwater.blast": "Underwater Blast Wave Particle",
+  "hyperexplosions.underwater.blast.tooltip": "A large blue-ish horizontal circle",
+  "hyperexplosions.underwater.bubbleamount": "Bubble Amount",
+  "hyperexplosions.underwater.bubbleamount.tooltip": "Little bubbles that pop after some time",
+  "hyperexplosions.underwater.bubbleamount.warningtooltip": "§cWarning§r: Too many bubbles may cause lag!",
+  "hyperexplosions.underwater.sparks": "Sparks Particle",
+  "hyperexplosions.underwater.sparks.tooltip": "White lines that come as a result of the explosion",
+  "hyperexplosions.underwater.sparks.size": "Sparks Size",
+  "hyperexplosions.underwater.sparks.size.tooltip": "Controls the size of the sparks particle",
+  "hyperexplosions.underwater.sparks.opacity": "Sparks Opacity",
+  "hyperexplosions.underwater.sparks.opacity.tooltip": "Controls the opacity of the sparks particle",
+  "hyperexplosions.underwater.default": "Default Explosion Particles",
+  "hyperexplosions.underwater.default.tooltip": "The vanilla Minecraft particles",
+
+
+
+  "hyperexplosions.category.extras": "Extras",
+
+  "hyperexplosions.extras.group": "Extras",
+  "hyperexplosions.extras.group.tooltip": "All extra options",
+  "hyperexplosions.extras.logs": "Debug Logs",
+  "hyperexplosions.extras.logs.tooltip": "Extra console logs to help debug, if needed",
+  "hyperexplosions.extras.logs.warningtooltip": "§cWarning§r: Will spam logs!",
+  "hyperexplosions.extras.enabled": "Mod Enabled",
+  "hyperexplosions.extras.enabled.tooltip": "Should the mod be enabled?"
+
+}
