@@ -23,6 +23,9 @@ repositories {
 		name 'Xander Maven'
 		url 'https://maven.isxander.dev/releases'
 	}
+	maven {
+		url 'https://jitpack.io'
+	}
 }
 
 dependencies {
@@ -40,11 +43,7 @@ dependencies {
 	//YACL
 	modImplementation 'dev.isxander:yet-another-config-lib:2.2.0'
 
-
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
-
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
+	include modImplementation("com.github.Goby56:Renderer:5b1e0b81fd")
 }
 
 processResources {

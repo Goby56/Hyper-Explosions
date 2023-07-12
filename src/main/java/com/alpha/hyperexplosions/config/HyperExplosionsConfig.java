@@ -19,7 +19,7 @@ import java.nio.file.Path;
 
 public class HyperExplosionsConfig {
 
-    public static final ConfigInstance<HyperExplosionsConfig> INSTANCE = new GsonConfigInstance<>(HyperExplosionsConfig.class, Path.of("./config/explosiveenhancement.json"));
+    public static final ConfigInstance<HyperExplosionsConfig> INSTANCE = new GsonConfigInstance<>(HyperExplosionsConfig.class, Path.of("./config/hyperexplosions.json"));
 
     @ConfigEntry public boolean showBlastWave = true;
     @ConfigEntry public boolean showFireball = true;
