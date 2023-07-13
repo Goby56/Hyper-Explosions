@@ -1,0 +1,6 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "hyperexplosions:item/nuke_item"
+    }
+}

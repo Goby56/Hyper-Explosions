@@ -1,8 +1,7 @@
-package com.alpha.hyperexplosions.particles.custom;
+package com.alpha.hyperexplosions.particles;
 
-import com.alpha.hyperexplosions.HyperExplosions;
 import com.alpha.hyperexplosions.config.HyperExplosionsConfig;
-import com.alpha.hyperexplosions.particles.ModParticles;
+import com.alpha.hyperexplosions.registry.ParticleRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
@@ -35,7 +34,7 @@ public class ShockwaveParticle extends SpriteBillboardParticle {
             this.velocityY -= (double)this.gravityStrength;
             this.move(this.velocityX, this.velocityY, this.velocityZ);
             if(this.age >= this.maxAge * 0.65 && HyperExplosionsConfig.INSTANCE.getConfig().showUnderwaterSparks) {
-                this.world.addParticle(ModParticles.UNDERWATERSPARKS, this.x, this.y, this.z, this.velocityX, this.velocityY, this.velocityZ);
+                this.world.addParticle(ParticleRegistry.UNDERWATERSPARKS, this.x, this.y, this.z, this.velocityX, this.velocityY, this.velocityZ);
             }
             this.setSpriteForAge(this.spriteProvider);
         }

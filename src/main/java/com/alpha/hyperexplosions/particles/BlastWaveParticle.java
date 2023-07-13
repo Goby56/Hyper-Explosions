@@ -1,4 +1,4 @@
-package com.alpha.hyperexplosions.particles.custom;
+package com.alpha.hyperexplosions.particles;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

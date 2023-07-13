@@ -1,4 +1,6 @@
 {
+  "block.hyperexplosions.nuke_block": "Nuclear bomb",
+
   "hyperexplosions.config.title": "Explosive Enhancement Config",
 
   "hyperexplosions.category.default": "Particles",

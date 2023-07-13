@@ -1,4 +1,4 @@
-package com.alpha.hyperexplosions.particles;
+package com.alpha.hyperexplosions.registry;
 
 import com.alpha.hyperexplosions.HyperExplosions;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
@@ -7,7 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class ModParticles {
+public class ParticleRegistry {
     public static final DefaultParticleType BLASTWAVE = FabricParticleTypes.simple();
     public static final DefaultParticleType FIREBALL = FabricParticleTypes.simple();
     public static final DefaultParticleType BLANK_FIREBALL = FabricParticleTypes.simple();
