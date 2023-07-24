@@ -22,38 +22,34 @@ public class NukeBlockEntityRenderer implements BlockEntityRenderer<NukeBlockEnt
 
     @Override
     public void render(NukeBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        matrices.push();
-        matrices.multiply(getRotation(entity.getCachedState().get(NukeBlock.FACING)));
-        RenderSystem.enableDepthTest();
-        if (entity.getCachedState().get(NukeBlock.PART) == NukePart.FIN) {
-            HyperExplosionsClient.NUKE.render(matrices, entity.getPos().toCenterPos());
+        if (entity.getCachedState().get(NukeBlock.PART) != NukePart.FIN) {
+            return;
         }
+        RenderSystem.enableDepthTest();
+
+        Direction facing = entity.getCachedState().get(NukeBlock.FACING);
+        int dx = facing.getOffsetX(), dy = facing.getOffsetY(), dz = facing.getOffsetZ();
+        Vec3d pos = entity.getPos().toCenterPos();
+        Vec3d cameraOffset = MinecraftClient.getInstance().gameRenderer.getCamera().getPos().subtract(pos);
+
+        matrices.push();
+        matrices.translate(0.5 + 0.48 * dx, 0.5 + 0.48 * dy, 0.5 + 0.48 * dz);
+        matrices.scale(0.51f + 0.143f * Math.abs(dx), 0.51f + 0.143f * Math.abs(dy), 0.51f + 0.143f * Math.abs(dz));
+        matrices.multiply(getRotation(facing));
+        matrices.translate(cameraOffset.x, cameraOffset.y, cameraOffset.z);
+
+        HyperExplosionsClient.NUKE.render(matrices, pos);
         matrices.pop();
     }
 
     public static Quaternionf getRotation(Direction direction) {
-        Quaternionf result;
-        switch (direction) {
-            case UP:
-                result = RotationAxis.NEGATIVE_Z.rotationDegrees(90);
-                break;
-            case DOWN:
-                result = RotationAxis.POSITIVE_Z.rotationDegrees(90);
-                break;
-            case NORTH:
-                result = RotationAxis.NEGATIVE_Y.rotationDegrees(90);
-                break;
-            case SOUTH:
-                result = RotationAxis.POSITIVE_Y.rotationDegrees(90);
-                break;
-            case EAST:
-                result = RotationAxis.POSITIVE_Y.rotationDegrees(180);
-                break;
-            case WEST:
-            default:
-                result = RotationAxis.POSITIVE_Y.rotationDegrees(0);
-                break;
-        }
-        return result;
+        return switch (direction) {
+            case UP -> RotationAxis.NEGATIVE_Z.rotationDegrees(90);
+            case DOWN -> RotationAxis.POSITIVE_Z.rotationDegrees(90);
+            case NORTH -> RotationAxis.NEGATIVE_Y.rotationDegrees(90);
+            case SOUTH -> RotationAxis.POSITIVE_Y.rotationDegrees(90);
+            case EAST -> RotationAxis.POSITIVE_Y.rotationDegrees(180);
+            case WEST -> RotationAxis.POSITIVE_Y.rotationDegrees(0);
+        };
     }
 }

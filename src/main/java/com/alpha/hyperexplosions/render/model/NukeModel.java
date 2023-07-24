@@ -33,4 +33,8 @@ public class NukeModel {
     public void render(MatrixStack stack, Vec3d origin) {
         this.obj.draw(stack, new Matrix4f(), origin);
     }
+
+    public void render(MatrixStack stack, Matrix4f viewMatrix, Vec3d origin) {
+        this.obj.draw(stack, viewMatrix, origin);
+    }
 }

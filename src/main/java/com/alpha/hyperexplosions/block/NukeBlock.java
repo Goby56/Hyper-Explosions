@@ -19,6 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -107,11 +108,11 @@ public class NukeBlock extends BlockWithEntity implements BlockEntityProvider {
         return PistonBehavior.IGNORE;
     }
 
-    @Override
-    protected ImmutableMap<BlockState, VoxelShape> getShapesForStates(Function<BlockState, VoxelShape> stateToShape) {
-        // TODO FIX OUTLINE SHAPE
-        return super.getShapesForStates(stateToShape);
-    }
+//    @Override
+//    protected ImmutableMap<BlockState, VoxelShape> getShapesForStates(Function<BlockState, VoxelShape> stateToShape) {
+//        // TODO FIX OUTLINE SHAPE
+//        return super.getShapesForStates(stateToShape);
+//    }
 
     @Override
     public boolean isTranslucent(BlockState state, BlockView world, BlockPos pos) {
@@ -121,6 +122,18 @@ public class NukeBlock extends BlockWithEntity implements BlockEntityProvider {
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.INVISIBLE;
+    }
+
+//    @Override
+//    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+//        Direction direction = NukeBlock.getOppositePartDirection(state);
+//        int dx = direction.getOffsetX() * 16, dy = direction.getOffsetY() * 16, dz = direction.getOffsetZ() * 16;
+//        return Block.createCuboidShape(dx, dy, dz, 16 + dx, 16 + dy, 16 + dz);
+//    }
+
+    public static Direction getOppositePartDirection(BlockState state) {
+        Direction direction = state.get(FACING);
+        return state.get(PART) == NukePart.HEAD ? direction.getOpposite() : direction;
     }
 
     @Nullable
