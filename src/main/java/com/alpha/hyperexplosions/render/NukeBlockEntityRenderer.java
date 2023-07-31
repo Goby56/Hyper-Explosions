@@ -38,7 +38,7 @@ public class NukeBlockEntityRenderer implements BlockEntityRenderer<NukeBlockEnt
         matrices.multiply(getRotation(facing));
         matrices.translate(cameraOffset.x, cameraOffset.y, cameraOffset.z);
 
-        HyperExplosionsClient.NUKE.render(matrices, pos);
+        HyperExplosionsClient.NUKE.render(matrices, pos, light);
         matrices.pop();
     }
 

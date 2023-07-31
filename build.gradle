@@ -38,12 +38,12 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	//Mod Menu
-	modApi "com.terraformersmc:modmenu:${modmenu_version}"
+	modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
 
 	//YACL
-	modImplementation 'dev.isxander:yet-another-config-lib:2.2.0'
+	modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-	include modImplementation("com.github.Goby56:Renderer:5b1e0b81fd")
+	include modImplementation("com.github.Goby56:Renderer:${project.renderer_version}")
 }
 
 processResources {
